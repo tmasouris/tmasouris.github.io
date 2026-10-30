@@ -2,677 +2,839 @@
 <html lang="en">
 
 <head>
-  <title>Athanasios Masouris | Personal Website</title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Athanasios Masouris | AI Researcher</title>
+  <meta name="description"
+    content="Athanasios Masouris – AI Researcher at Shell, building generative AI and multi-agent systems. MSc Computer Science (Cum Laude), TU Delft.">
+  <meta name="author" content="Athanasios Masouris">
+  <link rel="canonical" href="https://tmasouris.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tmasouris.com/">
+  <meta property="og:title" content="Athanasios Masouris | AI Researcher">
+  <meta property="og:description"
+    content="AI Researcher at Shell, building generative AI and multi-agent systems – from research to production.">
+  <meta property="og:image" content="https://tmasouris.com/img/hero/thanos-og.jpg">
+  <meta name="twitter:card" content="summary">
+
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.bundle.css">
-  <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem("theme"); } catch (e) { }
+      if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/4e5a72c756.js" crossorigin="anonymous" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Athanasios Masouris",
+    "jobTitle": "AI Researcher",
+    "worksFor": { "@type": "Organization", "name": "Shell" },
+    "url": "https://tmasouris.com/",
+    "image": "https://tmasouris.com/img/hero/thanos-og.jpg",
+    "alumniOf": ["Delft University of Technology", "National Technical University of Athens"],
+    "sameAs": ["https://github.com/tmasouris", "https://www.linkedin.com/in/tmasouris"]
+  }
+  </script>
 </head>
 
 <body>
-  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-menu">
-      <div class="navbar-start">
-        <div class="navbar-item">
-          <a href="#about-me" class="icon is-large has-text-light">
-            About
-          </a>
-        </div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-        <div class="navbar-item">
-          <a href="#experience" class="is-large has-text-light">
-            Professional Experience
-          </a>
-        </div>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main navigation">
+      <a href="#top" class="brand">Athanasios Masouris</a>
 
-        <div class="navbar-item">
-          <a href="#experience" class="is-large has-text-light">
-            Internships
-          </a>
-        </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#internships">Internships</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-        <div class="navbar-item">
-          <a href="#projects" class="is-large has-text-light">
-            Projects
-          </a>
-        </div>
-
-        <div class="navbar-item">
-          <a href="#education" class="is-large has-text-light">
-            Education
-          </a>
-        </div>
-
-        <div class="navbar-item">
-          <a href="#publications" class="is-large has-text-light">
-            Publications
-          </a>
-        </div>
-
-        <div class="navbar-item">
-          <a href="#skills" class="is-large has-text-light">
-            Skills
-          </a>
-        </div>
-
-        <div class="navbar-item">
-          <a href="#contact" class="is-large has-text-light">
-            Contact
-          </a>
-        </div>
-
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <i class="fas fa-moon icon-moon" aria-hidden="true"></i>
+          <i class="fas fa-sun icon-sun" aria-hidden="true"></i>
+        </button>
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Open menu"
+          aria-expanded="false" aria-controls="nav-links">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <section class="hero is-primary">
-    <div class="hero-body">
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top">
       <div class="container">
-        <div class="level">
-          <div class="level-item has-text-centered">
-            <figure class="image is-128x128">
-              <img class="is-rounded" src="img/thanos.jpg">
-            </figure>
-          </div>
-        </div>
-        <div class="columns has-text-centered">
-          <div class="column">
-            <h1 class="title is-1">
-              Athanasios Masouris
-            </h1>
-            <h2 class="subtitle">
-              AI Researcher
-            </h2>
-            <p>
-              <a href="docs/resume.pdf" target="_blank" class="icon has-text-light">
-                <i class="fas fa-file-pdf"></i> <strong>Resume</strong>
-              </a>
+        <div class="hero-grid">
+          <figure class="hero-photo">
+            <img src="img/hero/thanos.webp" alt="Portrait of Athanasios Masouris" width="440" height="440">
+          </figure>
+
+          <div>
+            <h1>Athanasios Masouris</h1>
+            <p class="hero-role"><strong>AI Researcher</strong> at Shell · Amsterdam, NL</p>
+            <p class="hero-lead">
+              I design and build generative AI and multi-agent systems, bridging cutting-edge research
+              and scalable, production-ready solutions.
             </p>
+            <div class="hero-cta">
+              <a href="docs/resume.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i> Resume
+              </a>
+              <a href="mailto:thanosmas97@gmail.com" class="btn">
+                <i class="fas fa-envelope" aria-hidden="true"></i> Email
+              </a>
+              <a href="https://github.com/tmasouris" target="_blank" rel="noopener noreferrer" class="btn btn-icon"
+                aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/tmasouris" target="_blank" rel="noopener noreferrer"
+                class="btn btn-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>About Me</h2>
+        </div>
 
-<section class="section">
-  <div class="container">
-    <h1 id="about-me" class="title">About Me</h1>
-    <hr />
-    <p>
-      As an AI Researcher at Shell in Amsterdam, I design and implement advanced generative AI and multi-agent system solutions to tackle complex business challenges. My work spans from exploring state-of-the-art AI methodologies to delivering scalable, production-ready systems that enhance decision-making and operational efficiency.
-    </p><br>
-    <p>
-      Prior to joining Shell, I worked as an AI Engineer at PwC Greece, where I developed virtual assistants, AI agents, and end-to-end machine learning pipelines using Azure Machine Learning and Databricks. Following MLOps best practices, I delivered AI solutions that were both scalable and reliable for diverse business needs.
-    </p><br>
-    <p>
-      I hold an MSc in Computer Science (with distinction) from TU Delft, specializing in Artificial Intelligence with published research in computer vision and end-to-end recognition systems. I also earned a joint BSc & MSc in Electrical and Computer Engineering from NTUA, focusing on AI, deep learning, and GAN-based generative modeling. In addition, I am certified as a Microsoft Azure AI Engineer Associate and Data Scientist Associate, along with other industry-recognized credentials in AI, cloud, and MLOps.
-    </p><br>
-    <p>
-      I am passionate about bridging the gap between cutting-edge AI research and practical business applications. My hands-on approach ensures that complex technical solutions are robust, scalable, and aligned with strategic objectives. I enjoy collaborating with cross-functional teams to translate real-world challenges into impactful AI-driven products.
-    </p>
-  </div>
-</section>
+        <div class="about-grid">
+        <div class="prose">
+          <p>
+            As an AI Researcher at Shell in Amsterdam, I design and implement advanced generative AI and multi-agent
+            system solutions to tackle complex business challenges. My work spans from exploring state-of-the-art AI
+            methodologies to delivering scalable, production-ready systems that enhance decision-making and operational
+            efficiency.
+          </p>
+          <p>
+            Prior to joining Shell, I worked as an AI Engineer at PwC Greece, where I developed virtual assistants, AI
+            agents, and end-to-end machine learning pipelines using Azure Machine Learning and Databricks. Following
+            MLOps best practices, I delivered AI solutions that were both scalable and reliable for diverse business
+            needs.
+          </p>
+          <p>
+            I hold an MSc in Computer Science (with distinction) from TU Delft, specializing in Artificial Intelligence
+            with published research in computer vision and end-to-end recognition systems. I also earned a joint BSc
+            &amp; MSc in Electrical and Computer Engineering from NTUA, focusing on AI, deep learning, and GAN-based
+            generative modeling. In addition, I am certified as a Microsoft Azure AI Engineer Associate and Data
+            Scientist Associate, along with other industry-recognized credentials in AI, cloud, and MLOps.
+          </p>
+          <p>
+            I am passionate about bridging the gap between cutting-edge AI research and practical business
+            applications. My hands-on approach ensures that complex technical solutions are robust, scalable, and
+            aligned with strategic objectives. I enjoy collaborating with cross-functional teams to translate
+            real-world challenges into impactful AI-driven products.
+          </p>
+        </div>
 
+        <aside class="card focus-card">
+          <h3>Focus areas</h3>
+          <ul class="focus-list">
+            <li><span class="focus-icon"><i class="fas fa-robot" aria-hidden="true"></i></span> Agentic AI</li>
+            <li><span class="focus-icon"><i class="fas fa-magic" aria-hidden="true"></i></span> Generative AI</li>
+            <li><span class="focus-icon"><i class="fas fa-eye" aria-hidden="true"></i></span> Computer Vision</li>
+            <li><span class="focus-icon"><i class="fas fa-cogs" aria-hidden="true"></i></span> Machine Learning
+              Operations (MLOps)</li>
+          </ul>
+        </aside>
+        </div>
+      </div>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <h1 id="experience" class="title">Professional Experience</h1>
-      <hr />
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section alt" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <h2>Professional Experience</h2>
+        </div>
 
-      <div class="card">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <img src="img/shell_logo.png" alt="Placeholder image">
-              </figure>
+        <div class="timeline">
+          <article class="tl-item">
+            <div class="logo"><img src="img/experience/shell_logo.png" alt="Shell logo" loading="lazy"></div>
+            <div class="card">
+              <div class="tl-head">
+                <div>
+                  <h3>AI Researcher <span class="badge-current">Current</span></h3>
+                  <div class="org">Shell</div>
+                </div>
+                <div class="meta">
+                  <time datetime="2025-10">Oct 2025 – Present</time>
+                  Amsterdam, the Netherlands
+                </div>
+              </div>
+              <ul>
+                <li><b>Developing agentic systems:</b> Designing and implementing collaborative AI agents to address
+                  complex business challenges</li>
+                <li><b>Applying GenAI research:</b> Translating emerging research in generative and multi-modal AI into
+                  practical, high-impact solutions</li>
+                <li><b>Innovating with novel architectures:</b> Experimenting with new AI models and workflows to
+                  enhance decision-making and automation</li>
+              </ul>
+              <ul class="tags">
+                <li class="tag">Generative AI</li>
+                <li class="tag">Agentic AI</li>
+                <li class="tag">Scientific Research</li>
+              </ul>
             </div>
-            <div class="media-content">
-              <p class="title is-4">AI Researcher</p>
-              <p class="subtitle is-6">
-                <b>Shell</b><br>
-                <location>Amsterdam, the Netherlands</location><br>
-                <time datetime="2025-10">October 2025</time> - <time>Present</time>
+          </article>
+
+          <article class="tl-item">
+            <div class="logo"><img src="img/experience/pwc_logo.png" alt="PwC logo" loading="lazy"></div>
+            <div class="card">
+              <div class="tl-head">
+                <div>
+                  <h3>AI Engineer</h3>
+                  <div class="org">PwC</div>
+                </div>
+                <div class="meta">
+                  <time datetime="2024-04">Apr 2024 – Oct 2025</time>
+                  Athens, Greece
+                </div>
+              </div>
+              <ul>
+                <li><b>Developed generative AI solutions:</b> Designed and implemented retrieval-augmented generation
+                  (RAG) virtual assistants in Python and C#, enhancing domain-specific query resolution and user
+                  engagement</li>
+                <li><b>Built end-to-end ML pipelines:</b> Created comprehensive machine learning workflows—from data
+                  ingestion and feature engineering to model training and deployment—using Azure Machine Learning</li>
+                <li><b>Developed scalable backend systems:</b> Engineered robust APIs using Django Rest Framework to
+                  support high-impact analytics applications in the public sector</li>
+                <li><b>Streamlined deployment workflows:</b> Leveraged containerization and Azure cloud services to
+                  deliver scalable, reliable AI solutions</li>
+                <li><b>Collaborated across teams:</b> Worked closely with cross-functional stakeholders to translate
+                  business requirements into technical deliverables, contributing to the continuous improvement of
+                  development practices and tooling</li>
+              </ul>
+              <ul class="tags">
+                <li class="tag">Artificial Intelligence (AI)</li>
+                <li class="tag">Generative AI</li>
+                <li class="tag">Machine Learning</li>
+                <li class="tag">Microsoft Azure</li>
+                <li class="tag">Cross-functional Collaborations</li>
+                <li class="tag">Backend Development</li>
+                <li class="tag">Python</li>
+                <li class="tag">Django Rest Framework</li>
+                <li class="tag">C#</li>
+                <li class="tag">ASP.NET Core</li>
+                <li class="tag">Qdrant</li>
+                <li class="tag">Scikit-learn</li>
+                <li class="tag">Databricks</li>
+                <li class="tag">AzureML</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="logo"><img src="img/experience/hellenic-army.png" alt="Hellenic Army emblem" loading="lazy"></div>
+            <div class="card">
+              <div class="tl-head">
+                <div>
+                  <h3>Military Service</h3>
+                  <div class="org">Hellenic Army</div>
+                </div>
+                <div class="meta">
+                  <time datetime="2020-11">Nov 2020 – Jul 2021</time>
+                  Greece
+                </div>
+              </div>
+              <ul>
+                <li>Digitized archived documents</li>
+                <li>Developed scripts to automate the generation of patrol schedules</li>
+              </ul>
+              <ul class="tags">
+                <li class="tag">Python</li>
+                <li class="tag">MS Excel</li>
+                <li class="tag">VBA</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTERNSHIPS ================= -->
+    <section class="section" id="internships">
+      <div class="container">
+        <div class="section-head">
+          <h2>Internships</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="tl-item">
+            <div class="logo"><img src="img/internships/gsoc.png" alt="Google Summer of Code logo" loading="lazy"></div>
+            <div class="card">
+              <div class="tl-head">
+                <div>
+                  <h3>Contributor</h3>
+                  <div class="org">Google Summer of Code @ Intel OpenVINO Toolkit</div>
+                </div>
+                <div class="meta">
+                  <time datetime="2022-06">Jun 2022 – Sep 2022</time>
+                  Remote
+                </div>
+              </div>
+              <p class="project-line">Project: <a
+                  href="https://summerofcode.withgoogle.com/archive/2022/projects/bCmHAPIL" target="_blank"
+                  rel="noopener noreferrer"><b>Train a DL model for synthetic data generation for model
+                    optimization</b></a></p>
+              <ul>
+                <li>Developed a GAN for conditional image generation through knowledge distillation</li>
+                <li>Evaluated post-training quantization using synthetic data</li>
+                <li>Results demonstrated less than 0.6% accuracy degradation</li>
+                <li>Paper: <a href="https://arxiv.org/abs/2305.06052" target="_blank"
+                    rel="noopener noreferrer">Post-training Model Quantization Using GANs for Synthetic Data
+                    Generation</a></li>
+                <li>Code: <a href="https://github.com/tmasouris/gsoc2022-openvino" target="_blank"
+                    rel="noopener noreferrer">github.com/tmasouris/gsoc2022-openvino</a></li>
+              </ul>
+              <ul class="tags">
+                <li class="tag">Python</li>
+                <li class="tag">PyTorch</li>
+                <li class="tag">OpenVINO</li>
+                <li class="tag">Flask API</li>
+                <li class="tag">HTML</li>
+                <li class="tag">JS</li>
+                <li class="tag">Deep Learning</li>
+                <li class="tag">Computer Vision</li>
+                <li class="tag">Generative Adversarial Networks (GANs)</li>
+                <li class="tag">Knowledge Distillation</li>
+                <li class="tag">Model Quantization</li>
+                <li class="tag">LaTeX</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="logo"><img src="img/internships/ncsr-demokritos.webp" alt="NCSR Demokritos logo" loading="lazy"></div>
+            <div class="card">
+              <div class="tl-head">
+                <div>
+                  <h3>Machine Learning Intern</h3>
+                  <div class="org">NCSR Demokritos</div>
+                </div>
+                <div class="meta">
+                  <time datetime="2020-07">Jul 2020 – Sep 2020</time>
+                  Athens, Greece
+                </div>
+              </div>
+              <p class="project-line">Project: <b>Automatic Video-Game Review Summarization</b></p>
+              <ul>
+                <li>Refactored and rewrote the entire codebase of the pipeline for the review summarization system in
+                  Python</li>
+                <li>Evaluated machine learning classifiers for identifying the reviewed aspects of the video-game in
+                  users' reviews</li>
+                <li>Proposed a meta-classification approach which improved the overall performance of the pipeline</li>
+              </ul>
+              <ul class="tags">
+                <li class="tag">Python</li>
+                <li class="tag">PyTorch</li>
+                <li class="tag">Scikit-learn</li>
+                <li class="tag">Natural Language Processing (NLP)</li>
+                <li class="tag">Classification</li>
+                <li class="tag">Embeddings</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PUBLICATIONS ================= -->
+    <section class="section alt" id="publications">
+      <div class="container">
+        <div class="section-head">
+          <h2>Publications</h2>
+        </div>
+
+        <div class="pub-list">
+          <article class="card pub">
+            <div class="pub-logo padded">
+              <img src="img/publications/neurips.svg" alt="NeurIPS – Neural Information Processing Systems logo" width="240"
+                height="108" loading="lazy">
+            </div>
+            <div>
+              <h3>CANDO: Cooperative Agentic Network for Layout Design Optimization</h3>
+              <p class="pub-authors"><strong>Athanasios Masouris</strong>, Jing Zheng, Benjamin Chandler and Hadi
+                Jamali-Rad (2026)</p>
+              <p class="pub-venue">Advances in Neural Information Processing Systems (NeurIPS 2026) – Main Track</p>
+              <div class="pub-links">
+                <a class="btn btn-sm" href="https://shell-oss.github.io/cando/" target="_blank"
+                  rel="noopener noreferrer"><i class="fas fa-globe" aria-hidden="true"></i> Project page</a>
+                <a class="btn btn-sm" href="https://arxiv.org/abs/2610.10044" target="_blank"
+                  rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i> arXiv</a>
+                <a class="btn btn-sm" href="https://github.com/Shell-OSS/cando" target="_blank"
+                  rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+                <a class="btn btn-sm" href="https://github.com/Shell-OSS/cando/tree/main/data" target="_blank"
+                  rel="noopener noreferrer"><i class="fas fa-database" aria-hidden="true"></i> ALPS-Bench</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card pub">
+            <div class="pub-logo">
+              <img src="img/publications/visapp.jpg"
+                alt="VISAPP 2024 – 19th International Conference on Computer Vision Theory and Applications, Rome, Italy"
+                width="300" height="200" loading="lazy">
+            </div>
+            <div>
+              <h3>End-to-End Chess Recognition</h3>
+              <p class="pub-authors"><strong>Athanasios Masouris</strong> and Jan van Gemert (2024)</p>
+              <p class="pub-venue">In Proceedings of the 19th International Joint Conference on Computer Vision,
+                Imaging and Computer Graphics Theory and Applications – Volume 4: VISAPP, pages 393–403</p>
+              <div class="pub-links">
+                <a class="btn btn-sm" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=l9D9O8vDt8I=&amp;t=1"
+                  target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open" aria-hidden="true"></i>
+                  SciTePress</a>
+                <a class="btn btn-sm" href="https://arxiv.org/abs/2310.04086" target="_blank"
+                  rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i> arXiv</a>
+                <a class="btn btn-sm" href="https://github.com/tmasouris/end-to-end-chess-recognition" target="_blank"
+                  rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+                <a class="btn btn-sm" href="https://data.4tu.nl/datasets/99b5c721-280b-450b-b058-b2900b69a90f/2"
+                  target="_blank" rel="noopener noreferrer"><i class="fas fa-database" aria-hidden="true"></i>
+                  ChessReD</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card pub">
+            <div class="pub-logo padded">
+              <img src="img/publications/arxiv.png" alt="arXiv logo" width="180" height="180" loading="lazy">
+            </div>
+            <div>
+              <h3>Post-training Model Quantization Using GANs for Synthetic Data Generation <span
+                  class="pub-badge">Preprint</span></h3>
+              <p class="pub-authors"><strong>Athanasios Masouris</strong>, Mansi Sharma, Adrian Boguszewski, Alexander
+                Kozlov, Zhuo Wu and Raymond Lo (2023)</p>
+              <p class="pub-venue">arXiv preprint arXiv:2305.06052 · Google Summer of Code 2022 with the Intel
+                OpenVINO Toolkit</p>
+              <div class="pub-links">
+                <a class="btn btn-sm" href="https://arxiv.org/abs/2305.06052" target="_blank"
+                  rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i> arXiv</a>
+                <a class="btn btn-sm" href="https://github.com/tmasouris/gsoc2022-openvino" target="_blank"
+                  rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="card linked project">
+            <div class="project-media"><img src="img/projects/flexibot.webp" alt="FlexiBOT architecture" loading="lazy"></div>
+            <div class="project-body">
+              <h3><a href="https://github.com/tmasouris/flexibot-dotnet" target="_blank"
+                  rel="noopener noreferrer">FlexiBOT – Cloud-Agnostic RAG Chatbot</a></h3>
+              <p>
+                FlexiBOT is a cloud-neutral chatbot built with ASP.NET Core, using retrieval-augmented generation (RAG).
+                It features a semantic cache for quick response retrieval, integrates open-source models via Ollama, and
+                uses RabbitMQ for event-driven processes. The system employs modular workers for document handling, with
+                MinIO for storage, Qdrant for vector searches, PostgreSQL for data management, and Redis for caching
+                conversation history, providing an efficient and scalable solution for conversational AI.
               </p>
+              <ul class="tags">
+                <li class="tag">C#</li>
+                <li class="tag">ASP.NET Core</li>
+                <li class="tag">RabbitMQ</li>
+                <li class="tag">Ollama</li>
+                <li class="tag">Qdrant</li>
+                <li class="tag">Redis</li>
+                <li class="tag">PostgreSQL</li>
+                <li class="tag">MinIO</li>
+                <li class="tag">HTML/CSS/JS</li>
+                <li class="tag">Retrieval Augmented Generation (RAG)</li>
+                <li class="tag">Hypothetical Document Embeddings (HyDE)</li>
+              </ul>
+              <span class="project-cta">View on GitHub →</span>
             </div>
-          </div>
-          <div class="content">
-            <ul>
-              <li><b>Developing agentic systems:</b> Designing and implementing collaborative AI agents to address complex business challenges</li>
-              <li><b>Applying GenAI research:</b> Translating emerging research in generative and multi-modal AI into practical, high-impact solutions</li>
-              <li><b>Innovating with novel architectures:</b> Experimenting with new AI models and workflows to enhance decision-making and automation</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Generative AI</span>
-              <span class="tag">Agentic AI</span>
-              <span class="tag">Scientific Research</span>
-            </div>
-          </div>
-        </div>
-      </div>
+          </article>
 
-      <div class="card card-gap">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <img src="img/pwc_logo.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="media-content">
-              <p class="title is-4">AI Engineer</p>
-              <p class="subtitle is-6">
-                <b>PwC</b><br>
-                <location>Athens, Greece</location><br>
-                <time datetime="2024-4">April 2024</time> - <time datetime="2025-10">October 2025</time>
+          <article class="card linked project">
+            <div class="project-media"><img src="img/projects/ragpal.webp" alt="RAGPal illustration" loading="lazy"></div>
+            <div class="project-body">
+              <h3><a href="https://github.com/tmasouris/RAGPal" target="_blank" rel="noopener noreferrer">RAGPal: A PoC
+                  RAG-based Virtual Assistant</a></h3>
+              <p>
+                RAGPal is implemented as a web application with a front-end interface for user interaction and a
+                FastAPI-based back-end for handling requests and business logic. The system utilizes Azure OpenAI API
+                resources for chat completion and embedding generation, and the Qdrant vector database to serve as the
+                knowledge base for storing and retrieving documents.
               </p>
+              <ul class="tags">
+                <li class="tag">Python</li>
+                <li class="tag">FastAPI</li>
+                <li class="tag">AzureOpenAI API</li>
+                <li class="tag">Qdrant</li>
+                <li class="tag">HTML/CSS</li>
+                <li class="tag">JavaScript</li>
+                <li class="tag">Large Language Models (LLMs)</li>
+                <li class="tag">Retrieval Augmented Generation (RAG)</li>
+                <li class="tag">Prompt Engineering</li>
+              </ul>
+              <span class="project-cta">View on GitHub →</span>
             </div>
-          </div>
-          <div class="content">
-            <ul>
-              <li><b>Developed generative AI solutions</b>: Designed and implemented retrieval-augmented generation (RAG) virtual assistants in Python and C#, enhancing domain-specific query resolution and user engagement</li>
-              <li><b>Built end-to-end ML pipelines</b>: Created comprehensive machine learning workflows—from data ingestion and feature engineering to model training and deployment - using Azure Machine Learning</li>
-              <li><b>Developed scalable backend systems</b>: Engineered robust APIs using Django Rest Framework to support high-impact analytics applications in the public sector</li>
-              <li><b>Streamlined deployment workflows</b>: Leveraged containerization and Azure cloud services to deliver scalable, reliable AI solutions</li>
-              <li><b>Collaborated across teams</b>: Worked closely with cross-functional stakeholders to translate business requirements into technical deliverables, contributing to the continuous improvement of development practices and tooling</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Artificial Intelligence (AI)</span>
-              <span class="tag">Generative AI</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Microsoft Azure</span>
-              <span class="tag">Cross-functional Collaborations</span>
-              <span class="tag">Backend Development</span>
-              <span class="tag">Python</span>
-              <span class="tag">Django Rest Framework</span>
-              <span class="tag">C#</span>
-              <span class="tag">ASP.NET Core</span>
-              <span class="tag">Qdrant</span>
-              <span class="tag">Scikit-learn</span>
-              <span class="tag">Databricks</span>
-              <span class="tag">AzureML</span>
-            </div>
-          </div>
-        </div>
-      </div>
+          </article>
 
-      <div class="card card-gap">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <img src="img/hellenic-army.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="media-content">
-              <p class="title is-4">Military Service</p>
-              <p class="subtitle is-6">
-                <b>Hellenic Army</b><br>
-                <location>Greece</location><br>
-                <time datetime="2020-11">November 2020</time> - <time datetime="2021-7">July 2021</time></p>
-            </div>
-          </div>
-          <div class="content">
-            <ul>
-              <li>Digitized archived documents</li>
-              <li>Developed scripts to automate the generation of patrol schedules</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">MS EXcel</span>
-              <span class="tag">VBA</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="section">
-    <div class="container">
-      <h1 id="internships" class="title">Internships</h1>
-      <hr />
-
-      <div class="card">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <img src="img/gsoc.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="media-content">
-              <p class="title is-4">Contributor</p>
-              <p class="subtitle is-6">
-                <b>Google Summer of Code @ Intel OpenVINO Toolkit</b><br>
-                <location>Remote</location><br>
-                <time datetime="2022-6">June 2022</time> - <time datetime="2022-9">September 2022</time>
+          <article class="card linked project">
+            <div class="project-media"><img src="img/projects/e2e_chess.webp" alt="End-to-end chess recognition"
+                loading="lazy"></div>
+            <div class="project-body">
+              <h3><a href="https://github.com/tmasouris/end-to-end-chess-recognition" target="_blank"
+                  rel="noopener noreferrer">End-to-End Chess Recognition</a></h3>
+              <p>
+                The goal of this project was to develop a methodology that would predict the chessboard configuration in
+                an input image of a chessboard. Contrary to the predominant approaches, that aim to solve this task
+                through the pipeline of chessboard detection, square localization, and piece classification, we relied
+                on the power of deep learning models to directly predict the configuration from the entire image.
               </p>
+              <ul class="tags">
+                <li class="tag">Python</li>
+                <li class="tag">PyTorch Lightning</li>
+                <li class="tag">Deep Learning</li>
+                <li class="tag">Computer Vision</li>
+                <li class="tag">Image Processing</li>
+              </ul>
+              <span class="project-cta">View on GitHub →</span>
             </div>
-          </div>
-          <div class="content">
-            <p>Project: <a href="https://summerofcode.withgoogle.com/archive/2022/projects/bCmHAPIL">Train a DL model
-                for synthetic data generation for model optimization</p></a>
-            <ul>
-              <li>Developed a GAN for conditional image generation through knowledge distillation</li>
-              <li>Evaluated post-training quantization using synthetic data</li>
-              <li>Results demonstrated less than 0.6% accuracy degradation</li>
-              <li>Paper: <a href="https://arxiv.org/abs/2305.06052">Post-training Model Quantization Using GANs for
-                  Synthetic Data Generation</a></li>
-              <li>Code: <a
-                  href="https://github.com/tmasouris/gsoc2022-openvino">github.com/tmasouris/gsoc2022-openvino</a></li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">OpenVINO</span>
-              <span class="tag">Flask API</span>
-              <span class="tag">HTML</span>
-              <span class="tag">JS</span>
-              <span class="tag">Deep Learning</span>
-              <span class="tag">Computer Vision</span>
-              <span class="tag">Generative Adversarial Networks (GANs)</span>
-              <span class="tag">Knowledge Distillation</span>
-              <span class="tag">Model Quantization</span>
-              <span class="tag">LaTeX</span>
+          </article>
+
+          <article class="card linked project">
+            <div class="project-media"><img src="img/projects/chessred.webp" alt="Chess Recognition Dataset samples"
+                loading="lazy"></div>
+            <div class="project-body">
+              <h3><a href="https://data.4tu.nl/datasets/99b5c721-280b-450b-b058-b2900b69a90f/2" target="_blank"
+                  rel="noopener noreferrer">Chess Recognition Dataset (ChessReD)</a></h3>
+              <p>
+                The Chess Recognition Dataset (ChessReD) is a comprehensive collection of images of chess formations
+                that were captured using various smartphone cameras. It comprises 10,800 images from 100 chess games.
+                The dataset features a wide range of chess piece configurations, captured under different angles and
+                lighting conditions. The dataset includes detailed annotations about the pieces' formations in chess
+                algebraic notation, providing valuable information for chess recognition research.
+              </p>
+              <ul class="tags">
+                <li class="tag">Deep Learning</li>
+                <li class="tag">Computer Vision</li>
+                <li class="tag">Chess Recognition</li>
+                <li class="tag">Object Detection</li>
+              </ul>
+              <span class="project-cta">View dataset →</span>
             </div>
-          </div>
-        </div>
-      </div>
+          </article>
 
-      <div class="card card-gap">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <img src="img/ncsr-demokritos.png" alt="Placeholder image">
-              </figure>
+          <article class="card linked project">
+            <div class="project-media"><img src="img/projects/telegan.jpg" alt="TeleGAN generated images" loading="lazy">
             </div>
-            <div class="media-content">
-              <p class="title is-4">Machine Learning Intern</p>
-              <p class="subtitle is-6">
-                <b>NCSR DEMOKRITOS</b><br>
-                <location>Athens, Greece</location><br>
-                <time datetime="2020-7">July 2020</time> - <time datetime="2020-9">September 2020</time></p>
+            <div class="project-body">
+              <h3><a href="https://github.com/ails-lab/teleGAN/" target="_blank" rel="noopener noreferrer">TeleGAN:
+                  Text-to-Image Synthesis using GANs</a></h3>
+              <p>
+                The goal of this project was to develop a novel architecture which would be able to generate
+                high-resolution images conditioned on a given text description. The proposed model (TeleGAN) decomposes
+                the difficult task of high-quality image generation, into the more manageable sub-problems of low-res
+                black-and-white image generation, colorization, and resolution enhancement, in three consecutive stages.
+              </p>
+              <ul class="tags">
+                <li class="tag">Python</li>
+                <li class="tag">PyTorch</li>
+                <li class="tag">Deep Learning</li>
+                <li class="tag">Computer Vision</li>
+                <li class="tag">Conditional Image Generation</li>
+                <li class="tag">Text-to-Image</li>
+                <li class="tag">Generative Adversarial Networks (GANs)</li>
+              </ul>
+              <span class="project-cta">View on GitHub →</span>
             </div>
-          </div>
-          <div class="content">
-            <p>Project: <b>Automatic Video-Game Review Summarization</b></p>
-            <ul>
-              <li>Refactored and rewrote the entire codebase of the pipeline for the review summarization system in
-                Python</li>
-              <li>Evaluated machine learning classifiers for identifying the reviewed aspects of the video-game in
-                users' reviews
-              </li>
-              <li>Proposed a meta-classification approach which improved the overall performance of the
-                pipeline</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">Scikit-learn</span>
-              <span class="tag">Natural Language Processing (NLP)</span>
-              <span class="tag">Classification</span>
-              <span class="tag">Embeddings</span>
+          </article>
+
+          <article class="card linked project project-more">
+            <div class="project-body" style="flex: 0; align-items: center">
+              <i class="fab fa-github" aria-hidden="true"></i>
+              <h3><a href="https://github.com/tmasouris" target="_blank" rel="noopener noreferrer">Other projects</a>
+              </h3>
+              <p>The rest of my projects can be found on my GitHub account.</p>
+              <span class="project-cta">github.com/tmasouris →</span>
             </div>
-          </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- ================= EDUCATION ================= -->
+    <section class="section alt" id="education">
+      <div class="container">
+        <div class="section-head">
+          <h2>Education</h2>
+        </div>
 
+        <div class="timeline">
+          <article class="tl-item">
+            <div class="logo wide"><img src="img/education/tud.png" alt="TU Delft logo" loading="lazy"></div>
+            <div class="card">
+              <div class="tl-head">
+                <div>
+                  <h3>MSc in Computer Science <span class="distinction">Cum Laude</span></h3>
+                  <div class="org">Delft University of Technology</div>
+                </div>
+                <div class="meta">
+                  <time datetime="2021-09">Sep 2021 – Aug 2023</time>
+                  Delft, the Netherlands
+                </div>
+              </div>
+              <dl class="facts">
+                <div>
+                  <dt>Track</dt>
+                  <dd>Artificial Intelligence</dd>
+                </div>
+                <div>
+                  <dt>Grade</dt>
+                  <dd>8.5 / 10</dd>
+                </div>
+                <div class="wide">
+                  <dt>Thesis</dt>
+                  <dd><a href="https://github.com/tmasouris/end-to-end-chess-recognition" target="_blank"
+                      rel="noopener noreferrer">End-to-End Chess Recognition</a> · published at VISAPP 2024</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
 
-  <section class="section">
-    <div class="container">
-      <h1 id="projects" class="title">Projects</h1>
-      <hr />
+          <article class="tl-item">
+            <div class="logo"><img src="img/education/ntua.png" alt="NTUA logo" loading="lazy"></div>
+            <div class="card">
+              <div class="tl-head">
+                <div>
+                  <h3>Joint BSc &amp; MSc in Electrical and Computer Engineering</h3>
+                  <div class="org">National Technical University of Athens</div>
+                </div>
+                <div class="meta">
+                  <time datetime="2015-09">Sep 2015 – Aug 2020</time>
+                  Athens, Greece
+                </div>
+              </div>
+              <dl class="facts">
+                <div>
+                  <dt>Concentration</dt>
+                  <dd>Computer Science</dd>
+                </div>
+                <div>
+                  <dt>Grade</dt>
+                  <dd>8.27 / 10</dd>
+                </div>
+                <div>
+                  <dt>Lab</dt>
+                  <dd>Artificial Intelligence and Learning Systems (AILS)</dd>
+                </div>
+                <div class="wide">
+                  <dt>Thesis</dt>
+                  <dd><a href="https://github.com/ails-lab/teleGAN/" target="_blank" rel="noopener noreferrer">Text-to-image
+                      synthesis using Generative Adversarial Networks (GANs)</a></dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </div>
 
-      <div class="card">
-        <div class="card project-image">
-          <img src="img/flexibot.png" alt="Placeholder image">
-        </div>
-        <div class="project">
-          <div class="title">FlexiBOT - Cloud-Agnostic RAG Chatbot</div>
-          <div class="content">
-            FlexiBOT is a cloud-neutral chatbot built with ASP.NET Core, using retrieval-augmented generation (RAG).
-            It features a semantic cache for quick response retrieval, integrates open-source models via Ollama, and uses RabbitMQ for event-driven processes.
-            The system employs modular workers for document handling, with MinIO for storage, Qdrant for vector searches, PostgreSQL for data management,
-            and Redis for caching conversation history, providing an efficient and scalable solution for conversational AI.
-             <a href="https://github.com/tmasouris/flexibot-dotnet" target="_blank">View more..</a>
-          </div>
-          <div class="tags">
-            <span class="tag">C#</span>
-            <span class="tag">ASP.NET Core</span>
-            <span class="tag">RabbitMQ</span>
-            <span class="tag">Ollama</span>
-            <span class="tag">Qdrant</span>
-            <span class="tag">Redis</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">MinIO</span>
-            <span class="tag">HTML/CSS/JS</span>
-            <span class="tag">Retrieval Augmented Generation (RAG)</span>
-            <span class="tag">Hypothetical Document Embeddings (HyDE)</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card card-gap">
-        <div class="card project-image">
-          <img src="img/ragpal.jpg" alt="Placeholder image">
-        </div>
-        <div class="project">
-          <div class="title">RAGPal: A PoC RAG-based virtual assistant</div>
-          <div class="content">
-            RAGPal is implemented as a web application with a front-end interface for user interaction and a
-            FastAPI-based
-            back-end for handling requests and business logic. The system utilizes Azure OpenAI API resources for chat
-            completion and embedding generation, and the Qdrant vector database to serve as the knowledge base for
-            storing and retrieving documents. <a href="https://github.com/tmasouris/RAGPal" target="_blank">View
-              more..</a>
-          </div>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">AzureOpenAI API</span>
-            <span class="tag">Qdrant</span>
-            <span class="tag">HTML/CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Large Language Models (LLMs)</span>
-            <span class="tag">Retrieval Augmented Generation (RAG)</span>
-            <span class="tag">Prompt Engineering</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card card-gap">
-        <div class="card project-image">
-          <img src="img/e2e_chess.jpg" alt="Placeholder image">
-        </div>
-        <div class="project">
-          <div class="title">End-to-End Chess Recognition</div>
-          <div class="content">
-            The goal of this project was to develop a methodology that would predict the chessboard
-            configuration in an input image of a chessboard. Contrary to the predominant approaches, that aim to
-            solve this task through the pipeline of chessboard detection, square localization, and piece
-            classification,
-            we relied on the power of deep learning models to directly predict the configuration from the entire
-            image. <a href="https://github.com/tmasouris/end-to-end-chess-recognition" target="_blank">View more..</a>
-          </div>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">PyTorch Lightning</span>
-            <span class="tag">Deep Learning</span>
-            <span class="tag">Computer Vision</span>
-            <span class="tag">Image Processing</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card card-gap">
-        <div class="card project-image">
-          <img src="img/chessred.jpg" alt="Placeholder image">
-        </div>
-        <div class="project">
-          <div class="title">Chess Recognition Dataset (ChessReD)</div>
-          <div class="content">
-            The Chess Recognition Dataset (ChessReD) is a comprehensive collection of images of chess formations that
-            were captured using various smartphone cameras. It
-            comprises 10,800 images from 100 chess games. The dataset
-            features a wide range of chess piece configurations, captured under different angles and lighting
-            conditions. The dataset includes detailed annotations about the pieces' formations in chess algebraic
-            notation, providing valuable information for chess recognition research. <a
-              href="https://data.4tu.nl/datasets/99b5c721-280b-450b-b058-b2900b69a90f/2" target="_blank">View
-              more..</a>
-          </div>
-          <div class="tags">
-            <span class="tag">Deep Learning</span>
-            <span class="tag">Computer Vision</span>
-            <span class="tag">Chess Recognition</span>
-            <span class="tag">Object Detection</span>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card card-gap">
-        <div class="card project-image">
-          <img src="img/telegan.jpg" alt="Placeholder image">
-        </div>
-        <div class="project">
-          <div class="title">TeleGAN: Text-To-Image Synthesis using GANs</div>
-          <div class="content">
-            The goal of this project was to develop a novel architecture which would be able to generate high-resolution
-            images conditioned on a given text description. The proposed model (TeleGAN) decomposes the difficult task
-            of high-quality image generation, into the more manageable sub-problems of low-res black-and-white image
-            generation, colorization, and resolution enhancement, in three consecutive stages.
-            <a href="https://github.com/ails-lab/teleGAN/" target="_blank">View
-              more..</a>
-          </div>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">PyTorch</span>
-            <span class="tag">Deep Learning</span>
-            <span class="tag">Computer Vision</span>
-            <span class="tag">Conditional Image Generation</span>
-            <span class="tag">Text-to-Image</span>
-            <span class="tag">Generative Adversarial Networks (GANs)</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card card-gap">
-        <div class="card project-image">
-          <img id="gh-img" src="img/github.png" alt="Placeholder image">
-        </div>
-        <div class="project">
-          <div class="title">Other projects</div>
-          <div class="content">
-            The rest of my projects can be found on my <a href="https://github.com/tmasouris" target="_blank">GitHub
-              account.</a>
-          </div>
+        <h3 class="subhead">Certifications</h3>
+        <div class="cert-grid">
+          <a class="card cert" target="_blank" rel="noopener noreferrer"
+            href="https://learn.microsoft.com/api/credentials/share/en-us/AthanasiosMasouris-1269/713A55A97A0C7ADD?sharingId=EC56AA616D716B3B">
+            <span class="cert-icon"><img src="img/certifications/microsoft.svg" alt="Microsoft" width="28" height="28"></span>
+            <span class="cert-text"><span class="cert-title">Azure Administrator Associate</span><span
+                class="cert-meta">Microsoft · Jul 2025</span></span>
+            <i class="fas fa-external-link-alt cert-arrow" aria-hidden="true"></i>
+          </a>
+          <a class="card cert" target="_blank" rel="noopener noreferrer"
+            href="https://learn.microsoft.com/api/credentials/share/en-us/AthanasiosMasouris-1269/308B845D47DC3229?sharingId=EC56AA616D716B3B">
+            <span class="cert-icon"><img src="img/certifications/microsoft.svg" alt="Microsoft" width="28" height="28"></span>
+            <span class="cert-text"><span class="cert-title">Azure Data Scientist Associate</span><span
+                class="cert-meta">Microsoft · May 2025</span></span>
+            <i class="fas fa-external-link-alt cert-arrow" aria-hidden="true"></i>
+          </a>
+          <a class="card cert" target="_blank" rel="noopener noreferrer"
+            href="https://learn.microsoft.com/api/credentials/share/en-us/AthanasiosMasouris-1269/86052142749858ED?sharingId=EC56AA616D716B3B">
+            <span class="cert-icon"><img src="img/certifications/microsoft.svg" alt="Microsoft" width="28" height="28"></span>
+            <span class="cert-text"><span class="cert-title">Azure Data Fundamentals</span><span
+                class="cert-meta">Microsoft · Mar 2025</span></span>
+            <i class="fas fa-external-link-alt cert-arrow" aria-hidden="true"></i>
+          </a>
+          <a class="card cert" target="_blank" rel="noopener noreferrer"
+            href="https://learn.microsoft.com/api/credentials/share/en-us/AthanasiosMasouris-1269/9F9A6DCA16B51F7B?sharingId=EC56AA616D716B3B">
+            <span class="cert-icon"><img src="img/certifications/microsoft.svg" alt="Microsoft" width="28" height="28"></span>
+            <span class="cert-text"><span class="cert-title">Azure AI Engineer Associate</span><span
+                class="cert-meta">Microsoft · Dec 2024</span></span>
+            <i class="fas fa-external-link-alt cert-arrow" aria-hidden="true"></i>
+          </a>
+          <a class="card cert" target="_blank" rel="noopener noreferrer"
+            href="https://www.coursera.org/account/accomplishments/specialization/JFFWHL5GGQN8">
+            <span class="cert-icon"><img src="img/certifications/deeplearningai.png" alt="DeepLearning.AI" width="28" height="28"></span>
+            <span class="cert-text"><span class="cert-title">Machine Learning Engineering for Production
+                (MLOps)</span><span class="cert-meta">deeplearning.ai · Nov 2023</span></span>
+            <i class="fas fa-external-link-alt cert-arrow" aria-hidden="true"></i>
+          </a>
+          <a class="card cert" target="_blank" rel="noopener noreferrer"
+            href="https://learn.microsoft.com/api/credentials/share/en-us/AthanasiosMasouris-1269/2596AA0AAD497CCE?sharingId=EC56AA616D716B3B">
+            <span class="cert-icon"><img src="img/certifications/microsoft.svg" alt="Microsoft" width="28" height="28"></span>
+            <span class="cert-text"><span class="cert-title">Azure AI Fundamentals</span><span
+                class="cert-meta">Microsoft · May 2023</span></span>
+            <i class="fas fa-external-link-alt cert-arrow" aria-hidden="true"></i>
+          </a>
+          <a class="card cert" target="_blank" rel="noopener noreferrer"
+            href="https://learn.microsoft.com/api/credentials/share/en-us/AthanasiosMasouris-1269/6879BE04C7D22BE5?sharingId=EC56AA616D716B3B">
+            <span class="cert-icon"><img src="img/certifications/microsoft.svg" alt="Microsoft" width="28" height="28"></span>
+            <span class="cert-text"><span class="cert-title">Azure Fundamentals</span><span
+                class="cert-meta">Microsoft · May 2023</span></span>
+            <i class="fas fa-external-link-alt cert-arrow" aria-hidden="true"></i>
+          </a>
+          <a class="card cert" target="_blank" rel="noopener noreferrer"
+            href="https://www.coursera.org/account/accomplishments/specialization/JYRATNZGXX27">
+            <span class="cert-icon"><img src="img/certifications/deeplearningai.png" alt="DeepLearning.AI" width="28" height="28"></span>
+            <span class="cert-text"><span class="cert-title">Deep Learning Specialization</span><span
+                class="cert-meta">deeplearning.ai · Aug 2019</span></span>
+            <i class="fas fa-external-link-alt cert-arrow" aria-hidden="true"></i>
+          </a>
+          <a class="card cert" target="_blank" rel="noopener noreferrer"
+            href="https://www.coursera.org/account/accomplishments/verify/QDEUYPUYHLU4">
+            <span class="cert-icon"><img src="img/certifications/stanford.png" alt="Stanford" width="28" height="28"></span>
+            <span class="cert-text"><span class="cert-title">Machine Learning</span><span
+                class="cert-meta">Stanford Online · Apr 2019</span></span>
+            <i class="fas fa-external-link-alt cert-arrow" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- ================= SKILLS ================= -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <h2>Skills</h2>
+        </div>
 
-
-  <section class="section">
-    <div class="container">
-      <h1 id="education" class="title">Education</h1>
-      <hr />
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <p class="title is-4">Delft University of Technology</p>
-            <p class="subtitle is-6">MSc in Computer Science <br> <time datetime="2021-9">September 2021</time> - <time
-                datetime="2023-8">August 2023</time></p>
-          </div>
-          <div class="content">
-            <ul>
-              <li>Track: Artificial Intelligence</li>
-              <li>Grade: 8.5/10 (Cum Laude)</li>
-              <li>Thesis: <b>End-to-End Chess Recognition</b></li>
+        <div class="card no-hover skills">
+          <div class="skill-row">
+            <h3><i class="fas fa-code" aria-hidden="true"></i> Programming / Scripting</h3>
+            <ul class="chips">
+              <li>Python</li>
+              <li>C#</li>
+              <li>SQL</li>
+              <li>JavaScript</li>
+              <li>HTML/CSS</li>
             </ul>
           </div>
-        </div>
-        <div class="image-container">
-          <img src="img/tud.png" alt="TU Delft">
-        </div>
-      </div>
-
-      <div class="card card-gap">
-        <div class="card-content">
-          <div class="content">
-            <p class="title is-4">National Technical University of Athens</p>
-            <p class="subtitle is-6">Joint BSc & MSc in Electrical and Computer Engineering <br> <time
-                datetime="2015-9">September 2015</time> - <time datetime="2020-8">August
-                2020</time></p>
-          </div>
-          <div class="content">
-            <ul>
-              <li>Concentration field: Computer Science</li>
-              <li>Grade: 8.27/10</li>
-              <li>Member of the Artificial Intelligence and Learning Systems Laboratory (AILS lab)</li>
-              <li>Thesis: <b>Text-to-image synthesis using Generative Adversarial Networks (GANs)</b></li>
+          <div class="skill-row">
+            <h3><i class="fas fa-brain" aria-hidden="true"></i> Machine Learning &amp; AI</h3>
+            <ul class="chips">
+              <li>AzureML</li>
+              <li>Databricks</li>
+              <li>Scikit-learn</li>
+              <li>GenAI</li>
+              <li>LangGraph</li>
+              <li>MCP</li>
+              <li>HuggingFace</li>
+              <li>Ollama</li>
+              <li>Agentic AI</li>
+              <li>PyTorch</li>
             </ul>
           </div>
-        </div>
-        <div class="image-container">
-          <img src="img/ntua.png" alt="NTUA">
-        </div>
-      </div>
-
-      <div class="card card-gap">
-        <div class="card-content">
-          <div class="content">
-            <p class="title is-4">Certifications</p>
+          <div class="skill-row">
+            <h3><i class="fas fa-cloud" aria-hidden="true"></i> Cloud &amp; DevOps</h3>
+            <ul class="chips">
+              <li>Microsoft Azure</li>
+              <li>Docker</li>
+              <li>CI/CD</li>
+              <li>Databricks Asset Bundles</li>
+              <li>Git</li>
+              <li>Devcontainers</li>
+            </ul>
           </div>
-          <div class="content">
-            <ul>
-              <li><b>Azure Administrator Associate</b> (July 2025) by <i>Microsoft</i> <a
-                href="https://learn.microsoft.com/api/credentials/share/en-us/AthanasiosMasouris-1269/713A55A97A0C7ADD?sharingId=EC56AA616D716B3B"
-                target="_blank">[credential]</a></li>
-              <li><b>Azure Data Scientist Associate</b> (May 2025) by <i>Microsoft</i> <a
-                href="https://learn.microsoft.com/api/credentials/share/en-us/AthanasiosMasouris-1269/308B845D47DC3229?sharingId=EC56AA616D716B3B"
-                target="_blank">[credential]</a></li>
-              <li><b>Azure Data Fundamentals</b> (March 2025) by <i>Microsoft</i> <a
-                href="https://learn.microsoft.com/api/credentials/share/en-us/AthanasiosMasouris-1269/86052142749858ED?sharingId=EC56AA616D716B3B"
-                target="_blank">[credential]</a></li>
-              <li><b>Azure AI Engineer Associate</b> (Dec 2024) by <i>Microsoft</i> <a
-                href="https://learn.microsoft.com/api/credentials/share/en-us/AthanasiosMasouris-1269/9F9A6DCA16B51F7B?sharingId=EC56AA616D716B3B"
-                target="_blank">[credential]</a></li>
-              <li><b>Machine Learning Engineering for Production (MLOPs)</b> (Nov. 2023) by <i>deeplearning.ai</i> <a
-                  href="https://www.coursera.org/account/accomplishments/specialization/JFFWHL5GGQN8"
-                  target="_blank">[credential]</a></li>
-              <li><b>Azure AI Fundamentals</b> (May 2023) by <i>Microsoft</i> <a
-                  href="https://learn.microsoft.com/api/credentials/share/en-us/AthanasiosMasouris-1269/2596AA0AAD497CCE?sharingId=EC56AA616D716B3B"
-                  target="_blank">[credential]</a></li>
-              <li><b>Azure Fundamentals</b> (May 2023) by <i>Microsoft</i> <a
-                  href="https://learn.microsoft.com/api/credentials/share/en-us/AthanasiosMasouris-1269/6879BE04C7D22BE5?sharingId=EC56AA616D716B3B"
-                  target="_blank">[credential]</a></li>
-              <li><b>Deep Learning Specialization</b> (Aug. 2019) by <i>deeplearning.ai</i> <a
-                  href="https://www.coursera.org/account/accomplishments/specialization/JYRATNZGXX27"
-                  target="_blank">[credential]</a></li>
-              <li><b>Machine Learning</b> (Apr. 2019) by <i>Stanford|Online</i> <a
-                  href="https://www.coursera.org/account/accomplishments/verify/QDEUYPUYHLU4"
-                  target="_blank">[credential]</a></li>
+          <div class="skill-row">
+            <h3><i class="fas fa-server" aria-hidden="true"></i> APIs / Backend</h3>
+            <ul class="chips">
+              <li>Django Rest Framework</li>
+              <li>FastAPI</li>
+              <li>ASP.NET Core</li>
+            </ul>
+          </div>
+          <div class="skill-row">
+            <h3><i class="fas fa-users" aria-hidden="true"></i> Professional</h3>
+            <ul class="chips">
+              <li>Cross-functional collaboration</li>
+              <li>Stakeholder management</li>
+              <li>Requirements analysis</li>
+              <li>Project delivery</li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <h1 id="publications" class="title">Publications</h1>
-      <hr />
-      <ol class="publications">
-        <li>
-          Athanasios Masouris and Jan van Gemert (2024). <b>End-to-End Chess Recognition</b>. In Proceedings of the
-          <i>19th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and
-            Applications - Volume 4: VISAPP</i>, pages 393-403 <br> <a
-            href="https://www.scitepress.org/PublicationsDetail.aspx?ID=l9D9O8vDt8I=&t=1"
-            target="_blank">[SciTePress]</a> <a href="https://arxiv.org/abs/2310.04086" target="_blank">[arXiv]</a>
-        </li>
-      </ol>
-    </div>
-  </section>
+    <!-- ================= CONTACT ================= -->
+    <section class="section alt" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>Feel free to reach out by email or connect with me on LinkedIn.</p>
+        </div>
 
-  <section>
-    <div class="container">
-      <h1 id="skills" class="title">Skills</h1>
-      <hr />
-      <div class="skills">
-        <span><b>Programming/Scripting Languages</b></span> <br>
-        <ul>
-          <li>Python</li>
-          <li>C#</li>
-          <li>SQL</li>
-          <li>JavaScript</li>
-          <li>HTML/CSS</li>
-        </ul>
-        <br>
-        <span><b>Machine Learning and Artificial Intelligence</b></span> <br>
-        <ul>
-          <li>AzureML</li>
-          <li>Databricks</li>
-          <li>Scikit-learn</li>
-          <li>GenAI</li>
-          <li>LangGraph</li>
-          <li>MCP</li>
-          <li>HuggingFace</li>
-          <li>Ollama</li>
-          <li>Agentic AI</li>
-          <li>PyTorch</li>
-        </ul>
-        <br>
-        <span><b>Cloud and DevOps</b></span> <br>
-        <ul>
-          <li>Microsoft Azure</li>
-          <li>Docker</li>
-          <li>CI/CD</li>
-          <li>Databricks Asset Bundles</li>
-          <li>Git</li>
-          <li>Devcontainers</li>
-        </ul>
-        <br>
-        <span><b>APIs/Backend</b></span> <br>
-        <ul>
-          <li>Django Rest Framework</li>
-          <li>FastAPI</li>
-          <li>ASP.NET Core</li>
-        </ul>
-        <br>
-        <span><b>Professional</b></span> <br>
-        <ul>
-          <li>Cross-functional collaboration</li>
-          <li>Stakeholder management</li>
-          <li>Requirements analysis</li>
-          <li>Project delivery</li>
-        </ul>
+        <div class="contact-grid">
+          <a class="card contact-item" href="mailto:thanosmas97@gmail.com">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span><span class="contact-label">Email</span><span class="contact-value">thanosmas97@gmail.com</span></span>
+          </a>
+          <a class="card contact-item" href="https://www.linkedin.com/in/tmasouris" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            <span><span class="contact-label">LinkedIn</span><span class="contact-value">in/tmasouris</span></span>
+          </a>
+          <a class="card contact-item" href="https://github.com/tmasouris" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <span><span class="contact-label">GitHub</span><span class="contact-value">tmasouris</span></span>
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section class="section">
+  <footer class="site-footer">
     <div class="container">
-      <h1 id="contact" class="title">Contact</h1>
-      <hr />
-      <nav class="level">
-        <div class="level-item has-text-centered">
-          <div>
-            <a href="https://github.com/tmasouris" class="icon is-large">
-              <i class="fab fa-2x fa-github"></i>
-            </a>
-            <p class="heading"><a href="https://github.com/tmasouris">github.com/tmasouris</a></p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <a href="mailto:thanosmas97@gmail.com" class="icon is-large">
-              <i class="fas fa-2x fa-envelope"></i>
-            </a>
-            <p class="heading"><a href="mailto:thanosmas97@gmail.com">thanosmas97@gmail.com</a></p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <a href="https://www.linkedin.com/in/tmasouris" class="icon is-large">
-              <i class="fab fa-2x fa-linkedin-in"></i>
-            </a>
-            <p class="heading"><a href="https://www.linkedin.com/in/tmasouris">linkedin.com/in/tmasouris</a></p>
-          </div>
-        </div>
-      </nav>
+      <span>© <span id="year">2026</span> Athanasios Masouris</span>
+      <a href="#top">Back to top ↑</a>
     </div>
-  </section>
+  </footer>
 
-  <script src="js/bundle.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>
